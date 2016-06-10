@@ -1,0 +1,460 @@
+// 按钮样式写在这里
+// 对bootstrap以及bootstrap-material设计的样式进行小幅修改
+// Buttons
+// ----------------------------------
+.typo-button(@colorContrast: false) {
+  text-align : center;
+  vertical-align: middle;
+  font-size: @mdb-btn-font-size-base;
+  font-weight: @btn-font-weight;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: 700;
+
+  & when (@colorContrast) {
+    opacity: 0.87;
+  }
+}
+
+// 导入bootstrap-material的shadows mixins
+@import "@{bootstrap-material-less-path}/_shadows.less";
+
+// Base Style
+// -----------------------------------
+
+.btn,
+.input-goup-btn .btn {
+  display : inline-block;
+  position : relative;
+  margin: @walle-btn-gap @walle-btn-gap 0;
+  touch-action: manipulation; //阻止事件的双击缩放
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border : none;
+
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+  .user-select(none);
+
+  &,
+  &：active,
+  &.active {
+    &:focus,
+    &.focus {
+      .tab-focus();
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color : @btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    .box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: @cursor-disabled;
+    .opacity(.65);
+    .box-shadow(none);
+  }
+
+  a& {
+    &.disabled,
+    fieldset[disabled] & {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+
+
+  // material-design
+  .typo-button();
+  will-change: box-shadow, transform;
+  transition: box-shadow 0.2s @mdb-animation-curve-fast-out-linear-in,
+              background-color 0.2s @mdb-animation-curve-default,
+              color 0.2s @mdb-animation-curve-default;
+  outline: 0;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  // btn-flat
+  background: transparent;
+  &:not(.btn-raised) {
+    .variations(~".btn", ~"", color, @mdb-text-color-primary);
+    .background-variations(~".btn", ~"", @lime);
+    box-shadow: none;
+
+    &:not(.btn-link) {
+      &:hover,
+      &:focus {
+        // spec: flat/light bg Hover: 20% #999999
+        background-color: fade(#999, 20%);
+
+        .theme-dark & {
+          // spec: dark bg Hover: 15% #cccccc
+          background-color: fade(#ccc, 15%);
+        }
+      }
+    }
+  }
+
+
+  // color variations
+  &.btn-raised,
+  &.btn-fab,
+  .btn-group-raised & {
+    .background-variations(~".btn", ~"", @lime);
+  }
+
+  // btn-raised
+  &.btn-raised,
+  .btn-group-raised & {
+    &:not(.btn-link) {
+      .shadow-2dp();
+
+      // colors on hover, focus, active
+      &:hover,
+      &:focus,
+      &.active,
+      &:active,
+      &:hover .btn-inner,
+      &:focus .btn-inner,
+      &.active .btn-inner,
+      &:active .btn-inner {
+        outline : 0;
+
+        // FIXME: SPEC - this should be the 600 color, how can we get that programmatically if at all? Or are we limited to the color palette only?
+        // SASS conversion note: please mirror any content change in _mixins-shared.scss button-variations-content
+        .generic-variations(~".btn", ~"", @mdb-btn-background-color, {
+          background-color: contrast(@variation-color, darken(@variation-color, 4%), lighten(@variation-color, 4%), @contrast-factor);
+        });
+
+        // Spec:
+        //  - Raised Light/Light theme no hover.
+        //  - Raised Dark/Dark theme Hover color: 600
+        .theme-dark & {
+        }
+      }
+
+      // shadow on active
+      &.active,
+      &:active {
+        &,
+        &:hover {
+          .shadow-4dp();
+        }
+      }
+
+      // shadow on focus
+      //  Focus should take precedence over active, so specificity is needed
+      &:focus {
+        &,
+        &.active,
+        &:active {
+          &,
+          &:hover {
+            .focus-shadow();
+          }
+        }
+      }
+    }
+  }
+
+  // 圆形按钮
+  &.btn-fab {
+    border-radius: @walle-btn-radius;
+    font-size : @mdb-btn-fab-font-size;
+    height: @mdb-btn-fab-size;
+    margin: auto;
+    min-width: @mdb-btn-fab-size;
+    padding: 0;
+    overflow: hidden;
+    box-shasow: 0 1px 1.5px 0 rgba(0,0,0,0.12), 0 1px 1px 0 rgba(0,0,0, 0.24);
+    position: relative;
+    line-height: normal;
+
+    .ripple-container {
+      border-radius: @walle-btn-radius;
+    }
+
+    &.btn-fab-mini,
+    .btn-group-sm & {
+      height: @mdb-btn-fab-size-mini;
+      min-width: @mdb-btn-fab-size-mini;
+      width: @mdb-btn-fab-size-mini;
+
+      &.material-icons {
+        top: (@mdb-btn-icon-size-mini - @mdb-btn-fab-font-size) / 2;
+        left: (@mdb-btn-icon-size-mini - @mdb-btn-fab-font-size) / 2;
+      }
+    }
+
+    i.material-icons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-(@mdb-btn-fab-font-size / 2), -(@mdb-btn-fab-font-size / 2));
+      line-height: @mdb-btn-fab-font-size;
+      width: @mdb-btn-fab-font-size;
+    }
+
+  }
+
+  // Align icons inside buttons with text
+  i.material-icons {
+    vertical-align: middle;
+  }
+
+  // Size variations
+  &.btn-lg,
+  .btn-group-lg & {
+    font-size: @mdb-btn-font-size-lg;
+  }
+  &.btn-sm,
+  .btn-group-sm & {
+    padding: 5px 20px;
+    font-size: @mdb-btn-font-size-sm;
+  }
+  &.btn-xs,
+  .btn-group-xs & {
+    padding: 4px 15px;
+    font-size: @mdb-btn-font-size-xs;
+  }
+
+  // Walle 的特定Button
+  &.walle-btn,
+  &.walle-btn-lg {
+    border-radius: @walle-btn-radius;
+    .box-size(@walle-btn-outer);
+    padding: (@walle-btn-outer - @walle-btn-inner) / 2;
+    background: @walle-btn-bg;
+
+    > .btn-inner {
+      display: inline-block;
+      position: relative;
+      .box-size(@walle-btn-inner);
+      margin: 0;
+      padding: 0;
+      border: 0px solid transparent;
+      border-radius: @walle-btn-radius;
+      background-color: @walle-btn-inner-bg;
+      overflow: hidden;
+    }
+
+    &:not(.btn-raised) {
+      .variations(~".btn", ~"", color, @mdb-text-color-primary);
+      box-shadow: none;
+
+      &:not(.btn-link) {
+        &:hover .btn-inner,
+        &:focus .btn-inner {
+          // spec: flat/light bg Hover: 20% #999999
+          background-color: fade(#999, 20%);
+
+          .theme-dark & {
+            // spec: dark bg Hover: 15% #cccccc
+            background-color: fade(#ccc, 15%);
+          }
+        }
+      }
+    }
+
+
+  }
+  &.walle-btn-lg {
+    .box-size(@walle-btn-outer-lg);
+    padding: (@walle-btn-outer-lg - @walle-btn-inner-lg) / 2;
+    > .btn-inner {
+      .box-size(@walle-btn-inner-lg);
+    }
+  }
+
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn-primary {
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Success appears as green
+.btn-success {
+  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: @link-color;
+  font-weight: normal;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    .box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Button Sizes
+// --------------------------------------
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+// Material Button
+// Disabled buttons and button groups
+.btn,
+.input-group-btn .btn,
+.btn-group,
+.btn-group-vertical {
+  // have to ratchet up the specificity to kill drop shadows on disabled raised buttons
+  fieldset[disabled][disabled] &,
+  &.disabled,
+  &:disabled,
+  &[disabled][disabled] {
+    // spec: light theme: Disabled text: 26% #000000
+    color: fade(#000000, 26%);
+    .theme-dark & {
+      // spec: dark theme: Disabled text: 30% #FFFFFF
+      color: fade(#FFFFFF, 30%);
+    }
+
+    // flat buttons lose transparency
+    // background: transparent;
+    background: @grey-400;
+
+    // no box-shadow on raised - need specificity
+    &.btn-raised,
+    &.btn-group-raised {
+      &,
+      &.active,
+      &:active,
+      &:focus:not(:active) {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Walle UI -- Buttons</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../dist/css/core.css">
+  <link rel="stylesheet" href="../dist/css/svg.sprite.css">
+  <!-- <link rel="stylesheet" href="../bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css"> -->
+  <link rel="stylesheet" href="../bower_components/bootstrap-material-design/dist/css/ripples.css">
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+  <script src="../bower_components/bootstrap-material-design/dist/js/material.js"></script>
+
+
+
+</head>
+<body>
+  <div>
+    <a class="btn btn-default disabled" href="javascript:void 0;" role="button">Link</a>
+    <button class="btn btn-default" type="submit">Button</button>
+    <input class="btn btn-default" type="button" value="Input">
+    <input class="btn btn-default" type="submit" value="Submit">
+  </div>
+  <div>
+    <a class="btn btn-default  btn-lg" href="javascript:void 0;" role="button">Link</a>
+    <button class="btn btn-default" type="submit">Button</button>
+    <input class="btn btn-default btn-sm" type="button" value="Input">
+    <input class="btn btn-default btn-xs" type="submit" value="Submit">
+  </div>
+  <div>
+    <a class="btn btn-default  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-primary  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-info  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-success  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-warning  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-danger  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+  </div>
+  <div>
+    <a class="btn btn-raised btn-default  btn-lg disabled" disabled href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-raised btn-primary  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-raised btn-info  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-raised btn-success  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-raised btn-warning  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+    <a class="btn btn-raised btn-danger  btn-lg" href="javascript:void 0;" role="button">Link Button</a>
+  </div>
+  <div>
+    <a href="javascript:void 0;" class="btn walle-btn">Link</a>
+    <button class="btn walle-btn btn-default" type="submit">Button</button>
+    <input class="btn walle-btn btn-default" type="button" value="Input">
+    <input class="btn walle-btn btn-default" type="submit" value="Submit">
+  </div>
+  <div>
+    <a href="javascript:void 0;" class="btn walle-btn">
+      <div class="btn-inner">
+        <div class="text-vertical-middle">
+          <p class="text-inner">
+            Link Button
+          </p>
+        </div>
+      </div>
+    </a>
+
+    <a href="javascript:void 0;" class="btn walle-btn">
+      <div class="btn-inner">
+        <div class="text-vertical-middle">
+          <p class="text-inner">
+            <i class="svg-bubbles-bubbles"></i>
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="javascript:void 0;" class="btn walle-btn btn-raised disabled">
+      <div class="btn-inner">
+        <div class="text-vertical-middle">
+          <p class="text-inner">
+            Link Button Raised
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <script>
+  $(function () {
+    $.material.init();
+  });
+  </script>
+</body>
+</html>

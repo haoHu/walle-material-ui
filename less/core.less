@@ -1,0 +1,72 @@
+/*!
+ * Walle UI Elements
+ */
+@bootstrap-lsee-path : "../bower_components/bootstrap/less";
+@bootstrap-material-less-path : "../bower_components/bootstrap-material-design/less";
+
+// Core variables and mixins
+// 引用bootstrap变量定义默认值
+@import "@{bootstrap-lsee-path}/variables.less";
+// 引用bootstrap material定义变量
+@import "@{bootstrap-material-less-path}/_variables.less";
+// 覆盖bootstrap变量定义默认值
+@import "_variables.less";
+
+// 引用bootstrap mixins
+@import "@{bootstrap-lsee-path}/mixins.less";
+// 引用bootstrap material design mixins
+@import "@{bootstrap-material-less-path}/_mixins.less";
+// 引用自己添加的公共方法
+@import "_mixins.less";
+
+// Reset and dependencies
+// 引用bootstrap normalize
+@import "@{bootstrap-lsee-path}/normalize.less";
+// 引用bootstrap print
+@import "@{bootstrap-lsee-path}/print.less";
+// font icon file (通过自动化图标拼接脚本自动生成，开发人员不能手动修改)
+// @import "glyphicons.less";
+@import "NightElf.less";
+// css sprite icons
+@import "icons.less";
+
+
+
+// Core CSS
+// 引用bootstrap scaffolding
+@import "@{bootstrap-lsee-path}/scaffolding.less";
+// walle自己的排版
+@import "_type.less";
+// 引用bootstrap code
+@import "@{bootstrap-lsee-path}/code.less";
+// 引用bootstrap grid system
+@import "@{bootstrap-lsee-path}/grid.less";
+// 引用bootstrap tables
+// TOOD 扩展或者自定义表格样式
+@import "_tables.less";
+// 引用bootstrap forms
+// TODO 扩展或者自定义表单元素样式
+@import "_forms.less";
+// 引用bootstrap Buttons
+// TODO 扩展或者自定义按钮样式
+@import "_buttons.less";
+// 全屏内容
+@import "_fullscreen.less";
+
+
+
+// Components
+// TODO 静态组件的样式写在这里
+
+// Components with Javascript
+// TODO 与js脚本的组件样式写在这里
+//
+
+
+
+
+// Utility classes
+@import "_utilities.less";
+@import "_responsive-utilities.less";
+
+

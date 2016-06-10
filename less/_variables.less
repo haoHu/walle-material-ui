@@ -1,0 +1,97 @@
+// Walle Screen Size
+@walle-screen-width : 1280px;
+@walle-screen-height : 720px;
+
+// Typography
+// 非衬线字体
+@font-family-sans-serif : Arial, Vendana, Tahoma, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+@font-family-sans-serif : Arial, Vendana, Tahoma, "Microsoft YaHei", sans-serif;
+// 衬线字体
+@font-family-serif : Georgia, "Times New Roman", serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+// 等宽字体
+@font-family-monospace : Menlo, Monaco, Consolas, "Courier New", monospace;
+// 手写字体
+@font-family-cursive : 'Comic Sans MS', cursive;
+// 安全字体
+@font-family-safe : Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
+// Walle 官方设计指南中推荐标题，子标题字体大小
+@walle-header-font-size : 120pt;
+@walle-sub-header-font-size : 45pt;
+
+// Walle 官方设计指南中推荐基本字体颜色
+@walle-base-color : #fff;
+
+// 默认背景颜色
+@walle-body-bg : #303030;
+
+// Walle全屏内容尺寸(1260px X 720px)
+@walle-full-screen-border : 10px;
+@walle-full-screen-width : @walle-screen-width - @walle-full-screen-border * 2;
+@walle-full-screen-height : @walle-screen-height - @walle-full-screen-border * 2;
+@walle-border-radius : 30px;
+
+// Walle按钮的相关参数
+// Walle菜单按钮和选项按钮外环直径
+@walle-btn-outer-lg : 330px;
+// Walle操作按钮外环直径
+@walle-btn-outer : 264px;
+// Walle菜单按钮和选项按钮内环直径
+@walle-btn-inner-lg : 200px;
+// Walle操作按钮内环直径
+@walle-btn-inner : 175px;
+// Walle按钮边框半径
+@walle-btn-radius : 50%;
+// Walle按钮背景色
+@walle-btn-bg : #fff;
+// Walle按钮内环默认背景色
+@walle-btn-inner-bg : rgb(172, 212, 232);
+// Walle按钮间距
+@walle-btn-gap : 20px;
+// Walle按钮组标题向下margin
+@walle-header-margin-bottom : 100px;
+// Walle按钮label向上margin
+@walle-label-margin-top : 40px;
+
+
+
+// Walle蒙版背景
+@walle-mask-bg : rgba(0, 0, 0, 0.75);
+
+
+// 覆盖bootstrap定义变量默认值
+
+//== Scaffolding
+@body-bg : @walle-body-bg;
+@text-color : @walle-base-color;
+
+// == Typography
+// @font-family-base : @font-family-safe;
+@font-family-base : @font-family-sans-serif;
+
+@font-size-base : 20pt;
+@font-size-large : ceil(@font-size-base * 1.25);
+@font-size-small : ceil(@font-size-base * 0.85);
+
+@font-size-h1 : floor(@font-size-base * 6);
+@font-size-h2 : floor(@font-size-base * 4.5);
+@font-size-h3 : floor(@font-size-base * 2.25);
+@font-size-h4 : floor(@font-size-base * 1.5);
+@font-size-h5 : floor(@font-size-base);
+@font-size-h6 : floor(@font-size-base * 0.85);
+
+
+// ==Iconography
+
+
+
+// ==Type
+// @headings-small-color : @gray-lighter;
+
+
+// ==Buttons
+//
+// @btn-default-color : #fff;
+
+

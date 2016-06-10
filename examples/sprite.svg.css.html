@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG CSS sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		<style>i{text-indent:200%;white-space:nowrap;overflow:hidden;display:inline-block;background-size:168px 128px!important}</style>
+
+<!--
+
+Sprite CSS
+====================================================================================================
+This is an all-in-one inline version of the CSS necessary to use the SVG sprite.
+
+-->
+
+<style type="text/css">
+.svg-bubbles-bubbles {
+	background: url("../dist/images/svg/sprite.css.svg") 0 0 no-repeat;
+	width: 36px;
+	height: 32px;
+}
+.svg-bubbles-bubbles2 {
+	background: url("../dist/images/svg/sprite.css.svg") 27.272727272727273% 0 no-repeat;
+	width: 36px;
+	height: 32px;
+}
+.svg-home-home {
+	background: url("../dist/images/svg/sprite.css.svg") 47.05882352941177% 100% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-home-home2 {
+	background: url("../dist/images/svg/sprite.css.svg") 26.470588235294116% 33.333333333333336% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-home-home3 {
+	background: url("../dist/images/svg/sprite.css.svg") 52.94117647058823% 0 no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-home-office {
+	background: url("../dist/images/svg/sprite.css.svg") 52.94117647058823% 33.333333333333336% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-home-paint-format {
+	background: url("../dist/images/svg/sprite.css.svg") 0 66.66666666666667% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-home-pencil {
+	background: url("../dist/images/svg/sprite.css.svg") 23.529411764705884% 66.66666666666667% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-home-pencil2 {
+	background: url("../dist/images/svg/sprite.css.svg") 47.05882352941177% 66.66666666666667% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-home-quill {
+	background: url("../dist/images/svg/sprite.css.svg") 100% 33.333333333333336% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-media-camera {
+	background: url("../dist/images/svg/sprite.css.svg") 76.47058823529412% 33.333333333333336% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-media-film {
+	background: url("../dist/images/svg/sprite.css.svg") 76.47058823529412% 66.66666666666667% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-media-headphones {
+	background: url("../dist/images/svg/sprite.css.svg") 0 100% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-media-image {
+	background: url("../dist/images/svg/sprite.css.svg") 23.529411764705884% 100% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-media-images {
+	background: url("../dist/images/svg/sprite.css.svg") 0 33.333333333333336% no-repeat;
+	width: 36px;
+	height: 32px;
+}
+.svg-media-music {
+	background: url("../dist/images/svg/sprite.css.svg") 70.58823529411765% 100% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-media-newspaper {
+	background: url("../dist/images/svg/sprite.css.svg") 100% 0 no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-media-play {
+	background: url("../dist/images/svg/sprite.css.svg") 76.47058823529412% 0 no-repeat;
+	width: 32px;
+	height: 32px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG CSS sprite preview</h1>
+			<p>This preview features the generated SVG file as a conventional CSS sprite. The shapes are displayed as background images of several <code>&lt;i&gt;</code> elements.</p>
+		</header>
+		<section>
+
+<!--
+
+Conventional CSS sprite
+====================================================================================================
+This technique uses CSS classes to display portions of the sprite as background image of
+appropriately sized elements.
+
+-->
+
+			<ul>
+				<li title="bubbles-bubbles">
+					<div class="icon-box">
+
+						<!-- bubbles-bubbles -->
+						<i class="svg-bubbles-bubbles">bubbles-bubbles</i>
+
+					</div>
+					<h2>bubbles-bubbles</h2>
+				</li>
+				<li title="bubbles-bubbles2">
+					<div class="icon-box">
+
+						<!-- bubbles-bubbles2 -->
+						<i class="svg-bubbles-bubbles2">bubbles-bubbles2</i>
+
+					</div>
+					<h2>bubbles-bubbles2</h2>
+				</li>
+				<li title="home-home">
+					<div class="icon-box">
+
+						<!-- home-home -->
+						<i class="svg-home-home">home-home</i>
+
+					</div>
+					<h2>home-home</h2>
+				</li>
+				<li title="home-home2">
+					<div class="icon-box">
+
+						<!-- home-home2 -->
+						<i class="svg-home-home2">home-home2</i>
+
+					</div>
+					<h2>home-home2</h2>
+				</li>
+				<li title="home-home3">
+					<div class="icon-box">
+
+						<!-- home-home3 -->
+						<i class="svg-home-home3">home-home3</i>
+
+					</div>
+					<h2>home-home3</h2>
+				</li>
+				<li title="home-office">
+					<div class="icon-box">
+
+						<!-- home-office -->
+						<i class="svg-home-office">home-office</i>
+
+					</div>
+					<h2>home-office</h2>
+				</li>
+				<li title="home-paint-format">
+					<div class="icon-box">
+
+						<!-- home-paint-format -->
+						<i class="svg-home-paint-format">home-paint-format</i>
+
+					</div>
+					<h2>home-paint-format</h2>
+				</li>
+				<li title="home-pencil">
+					<div class="icon-box">
+
+						<!-- home-pencil -->
+						<i class="svg-home-pencil">home-pencil</i>
+
+					</div>
+					<h2>home-pencil</h2>
+				</li>
+				<li title="home-pencil2">
+					<div class="icon-box">
+
+						<!-- home-pencil2 -->
+						<i class="svg-home-pencil2">home-pencil2</i>
+
+					</div>
+					<h2>home-pencil2</h2>
+				</li>
+				<li title="home-quill">
+					<div class="icon-box">
+
+						<!-- home-quill -->
+						<i class="svg-home-quill">home-quill</i>
+
+					</div>
+					<h2>home-quill</h2>
+				</li>
+				<li title="media-camera">
+					<div class="icon-box">
+
+						<!-- media-camera -->
+						<i class="svg-media-camera">media-camera</i>
+
+					</div>
+					<h2>media-camera</h2>
+				</li>
+				<li title="media-film">
+					<div class="icon-box">
+
+						<!-- media-film -->
+						<i class="svg-media-film">media-film</i>
+
+					</div>
+					<h2>media-film</h2>
+				</li>
+				<li title="media-headphones">
+					<div class="icon-box">
+
+						<!-- media-headphones -->
+						<i class="svg-media-headphones">media-headphones</i>
+
+					</div>
+					<h2>media-headphones</h2>
+				</li>
+				<li title="media-image">
+					<div class="icon-box">
+
+						<!-- media-image -->
+						<i class="svg-media-image">media-image</i>
+
+					</div>
+					<h2>media-image</h2>
+				</li>
+				<li title="media-images">
+					<div class="icon-box">
+
+						<!-- media-images -->
+						<i class="svg-media-images">media-images</i>
+
+					</div>
+					<h2>media-images</h2>
+				</li>
+				<li title="media-music">
+					<div class="icon-box">
+
+						<!-- media-music -->
+						<i class="svg-media-music">media-music</i>
+
+					</div>
+					<h2>media-music</h2>
+				</li>
+				<li title="media-newspaper">
+					<div class="icon-box">
+
+						<!-- media-newspaper -->
+						<i class="svg-media-newspaper">media-newspaper</i>
+
+					</div>
+					<h2>media-newspaper</h2>
+				</li>
+				<li title="media-play">
+					<div class="icon-box">
+
+						<!-- media-play -->
+						<i class="svg-media-play">media-play</i>
+
+					</div>
+					<h2>media-play</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Wed, 08 Jun 2016 10:06:58 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

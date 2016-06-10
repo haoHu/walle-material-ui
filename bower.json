@@ -1,0 +1,40 @@
+{
+	"name" : "walle-material-ui",
+	"authors": [
+		"huhao [huhao@netposa.com]"
+	],
+	"description" : "Material Design UI Elements and Components for walle",
+	"main": [
+		"dist/css/walle.css",
+		"dist/js/walle.js"
+	],
+	"jgnore" : [
+		".gitignore",
+		".editorconfig",
+		".jshintrc",
+		"Gruntfile.json",
+		"index.html",
+		"index.css",
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test"
+	],
+	"keywords": [
+		"UI"
+	],
+	"dependencies": {
+		"jquery": "^2.2",
+		"bootstrap": "~3.3.6",
+		"bootstrap-material-design" : "latest",
+		"dropdown.js" : "latest",
+		"avalon" : "1.5",
+		"requirejs" : "latest",
+		"domReady" : "latest",
+		"text" : "latest",
+		"require-css" : "latest",
+		"swiper" : "*",
+		"lodash" : "latest",
+		"svg-injector" : "*"
+	}
+}

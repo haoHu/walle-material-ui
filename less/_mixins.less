@@ -1,0 +1,19 @@
+// 公共方法写在这里
+// 设置盒子模型的规格
+.box-size(@size) {
+  width: @size;
+  height: @size;
+}
+.box-size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+// 重写bootstrap的.tab-focus
+.tab-focus () {
+  // Default
+  outline : 0 none;
+  // Webkit
+  outline: 0 auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
