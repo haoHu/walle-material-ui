@@ -5,20 +5,23 @@
 	],
 	"description" : "Material Design UI Elements and Components for walle",
 	"main": [
-		"dist/css/walle.css",
-		"dist/js/walle.js"
+		"dist/css/core.css",
+		"dist/css/svg.symbol.css",
+		"dist/css/svg.sprite.css"
 	],
 	"jgnore" : [
 		".gitignore",
 		".editorconfig",
 		".jshintrc",
-		"Gruntfile.json",
-		"index.html",
-		"index.css",
+		"Gruntfile.js",
+		"less",
+		"test",
+		"images",
+		"grunt",
+		"examples",
 		"**/.*",
 		"node_modules",
-		"bower_components",
-		"test"
+		"bower_components"
 	],
 	"keywords": [
 		"UI"
