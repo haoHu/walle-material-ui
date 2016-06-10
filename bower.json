@@ -10,6 +10,7 @@
 		"dist/css/svg.sprite.css"
 	],
 	"ignore" : [
+		"**/.*",
 		".gitignore",
 		".editorconfig",
 		".jshintrc",
@@ -19,7 +20,6 @@
 		"images",
 		"grunt",
 		"examples",
-		"**/.*",
 		"node_modules",
 		"bower_components"
 	],
