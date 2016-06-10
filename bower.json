@@ -9,7 +9,7 @@
 		"dist/css/svg.symbol.css",
 		"dist/css/svg.sprite.css"
 	],
-	"jgnore" : [
+	"ignore" : [
 		".gitignore",
 		".editorconfig",
 		".jshintrc",
