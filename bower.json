@@ -15,7 +15,6 @@
 		"test",
 		"grunt",
 		"examples",
-		"images",
 		"node_modules",
 		"bower_components"
 	],
