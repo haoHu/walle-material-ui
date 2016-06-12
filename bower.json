@@ -20,7 +20,8 @@
 		"grunt",
 		"examples",
 		"node_modules",
-		"less"
+		"less",
+		"bower_components"
 	],
 	"keywords": [
 		"UI"
