@@ -307,7 +307,7 @@ module.exports = function (grunt) {
     "svg-sprite",
     "icons-sprite",
     "web-font",
-    "dist-lest"
+    "dist-less"
   ]);
 
 }

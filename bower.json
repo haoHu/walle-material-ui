@@ -11,16 +11,12 @@
 	],
 	"ignore" : [
 		"**/.*",
-		".gitignore",
-		".editorconfig",
-		".jshintrc",
 		"Gruntfile.js",
 		"test",
-		"images",
 		"grunt",
 		"examples",
+		"images",
 		"node_modules",
-		"less",
 		"bower_components"
 	],
 	"keywords": [
