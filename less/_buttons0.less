@@ -28,7 +28,7 @@
 .input-goup-btn .btn {
   display : inline-block;
   position : relative;
-  //margin: @walle-btn-gap @walle-btn-gap 0;
+  margin: @walle-btn-gap @walle-btn-gap 0;
   touch-action: manipulation; //阻止事件的双击缩放
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -96,7 +96,8 @@
     box-shadow: none;
 
     &:not(.btn-link) {
-      &:hover {
+      &:hover,
+      &:focus {
         // spec: flat/light bg Hover: 20% #999999
         background-color: fade(#999, 20%);
 
@@ -233,12 +234,10 @@
 
   // Walle 的特定Button
   &.walle-btn,
-  &.walle-btn-lg,
-  &.walle-btn-skill {
+  &.walle-btn-lg {
     border-radius: @walle-btn-radius;
     .box-size(@walle-btn-outer);
     padding: (@walle-btn-outer - @walle-btn-inner) / 2;
-    .automargin(@walle-header-margin-bottom,@walle-btn-gap,@walle-label-margin-top);
     background: @walle-btn-bg;
 
     > .btn-inner {
@@ -252,12 +251,14 @@
       background-color: @walle-btn-inner-bg;
       overflow: hidden;
     }
+
     &:not(.btn-raised) {
       .variations(~".btn", ~"", color, @mdb-text-color-primary);
       box-shadow: none;
 
       &:not(.btn-link) {
-        &:hover .btn-inner {
+        &:hover .btn-inner,
+        &:focus .btn-inner {
           // spec: flat/light bg Hover: 20% #999999
           background-color: fade(#999, 20%);
 
@@ -269,6 +270,7 @@
       }
     }
 
+
   }
   &.walle-btn-lg {
     .box-size(@walle-btn-outer-lg);
@@ -278,39 +280,7 @@
     }
   }
 
-  &.walle-btn-skill {
-      .box-size(@walle-btn-outer-lg);
-      padding: ((@walle-btn-outer-skill - @walle-btn-inner-lg) / 2) ((@walle-btn-outer-lg - @walle-btn-inner-lg) / 2);
-      .automargin(0,0,0)!important;
-      > .btn-inner {
-        .box-size(@walle-btn-inner-lg);
-    }
-
-  }
-  &:hover,
-  &:active {
-    .walle-svg {
-    .walle-svg-fill(0.6);
-    }
-  }
 }
-
-//walle 按钮外围 for skill-menu only
-.walle-btn-wrap {
-  display: inline-block;
-  .box-size(@walle-btn-outer-lg,@walle-btn-outer-skill);
-  .automargin(@walle-header-margin-bottom,@walle-btn-gap,@walle-label-margin-top);
-  background: none;
-  overflow: hidden;
-}
-
-//svg 图标引用公共样式
-.walle-svg {
-  .box-size(@walle-svg-width,@walle-svg-height);
-  fill:@walle-svg-fill;
-  stroke:@walle-svg-stroke;
-}
-
 
 // Alternate buttons
 // --------------------------------------------------

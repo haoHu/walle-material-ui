@@ -291,8 +291,8 @@ th {
 }
 @font-face {
   font-family: "NightElf";
-  src: url("../images/webfont/night-elf.eot?cf10aaeeb99735238318659132a89927");
-  src: url("../images/webfont/night-elf.eot?#iefix") format("embedded-opentype"), url("../images/webfont/night-elf.woff2?cf10aaeeb99735238318659132a89927") format("woff2"), url("../images/webfont/night-elf.woff?cf10aaeeb99735238318659132a89927") format("woff"), url("../images/webfont/night-elf.ttf?cf10aaeeb99735238318659132a89927") format("truetype"), url("../images/webfont/night-elf.svg?cf10aaeeb99735238318659132a89927#NightElf") format("svg");
+  src: url("../images/webfont/night-elf.eot?b42592d4022b4170283c8ffb96694fcc");
+  src: url("../images/webfont/night-elf.eot?#iefix") format("embedded-opentype"), url("../images/webfont/night-elf.woff2?b42592d4022b4170283c8ffb96694fcc") format("woff2"), url("../images/webfont/night-elf.woff?b42592d4022b4170283c8ffb96694fcc") format("woff"), url("../images/webfont/night-elf.ttf?b42592d4022b4170283c8ffb96694fcc") format("truetype"), url("../images/webfont/night-elf.svg?b42592d4022b4170283c8ffb96694fcc#NightElf") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2385,7 +2385,6 @@ select[multiple].input-lg {
 .input-goup-btn .btn {
   display: inline-block;
   position: relative;
-  margin: 20px 20px 0;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
@@ -2435,7 +2434,7 @@ select[multiple].input-lg {
 .input-goup-btn .btn:focus,
 .btn.focus,
 .input-goup-btn .btn.focus {
-  color: #333;
+  color: #fff;
   text-decoration: none;
 }
 .btn:active,
@@ -2539,15 +2538,11 @@ fieldset[disabled] a.input-goup-btn .btn {
   color: rgba(255,255,255, 0.84);
 }
 .btn:not(.btn-raised):not(.btn-link):hover,
-.input-goup-btn .btn:not(.btn-raised):not(.btn-link):hover,
-.btn:not(.btn-raised):not(.btn-link):focus,
-.input-goup-btn .btn:not(.btn-raised):not(.btn-link):focus {
+.input-goup-btn .btn:not(.btn-raised):not(.btn-link):hover {
   background-color: rgba(153, 153, 153, 0.2);
 }
 .theme-dark .btn:not(.btn-raised):not(.btn-link):hover,
-.theme-dark .input-goup-btn .btn:not(.btn-raised):not(.btn-link):hover,
-.theme-dark .btn:not(.btn-raised):not(.btn-link):focus,
-.theme-dark .input-goup-btn .btn:not(.btn-raised):not(.btn-link):focus {
+.theme-dark .input-goup-btn .btn:not(.btn-raised):not(.btn-link):hover {
   background-color: rgba(204, 204, 204, 0.15);
 }
 .btn.btn-raised,
@@ -3042,17 +3037,22 @@ fieldset[disabled] a.input-goup-btn .btn {
 .btn.walle-btn,
 .input-goup-btn .btn.walle-btn,
 .btn.walle-btn-lg,
-.input-goup-btn .btn.walle-btn-lg {
+.input-goup-btn .btn.walle-btn-lg,
+.btn.walle-btn-skill,
+.input-goup-btn .btn.walle-btn-skill {
   border-radius: 50%;
   width: 264px;
   height: 264px;
   padding: 44.5px;
+  margin: 100px 20px 40px;
   background: #fff;
 }
 .btn.walle-btn > .btn-inner,
 .input-goup-btn .btn.walle-btn > .btn-inner,
 .btn.walle-btn-lg > .btn-inner,
-.input-goup-btn .btn.walle-btn-lg > .btn-inner {
+.input-goup-btn .btn.walle-btn-lg > .btn-inner,
+.btn.walle-btn-skill > .btn-inner,
+.input-goup-btn .btn.walle-btn-skill > .btn-inner {
   display: inline-block;
   position: relative;
   width: 175px;
@@ -3067,73 +3067,87 @@ fieldset[disabled] a.input-goup-btn .btn {
 .btn.walle-btn:not(.btn-raised),
 .input-goup-btn .btn.walle-btn:not(.btn-raised),
 .btn.walle-btn-lg:not(.btn-raised),
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised) {
+.input-goup-btn .btn.walle-btn-lg:not(.btn-raised),
+.btn.walle-btn-skill:not(.btn-raised),
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised) {
   box-shadow: none;
 }
 .btn.walle-btn:not(.btn-raised),
 .input-goup-btn .btn.walle-btn:not(.btn-raised),
 .btn.walle-btn-lg:not(.btn-raised),
 .input-goup-btn .btn.walle-btn-lg:not(.btn-raised),
+.btn.walle-btn-skill:not(.btn-raised),
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised),
 .btn.walle-btn:not(.btn-raised).btn-default,
 .input-goup-btn .btn.walle-btn:not(.btn-raised).btn-default,
 .btn.walle-btn-lg:not(.btn-raised).btn-default,
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-default {
+.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-default,
+.btn.walle-btn-skill:not(.btn-raised).btn-default,
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised).btn-default {
   color: rgba(0,0,0, 0.87);
 }
 .btn.walle-btn:not(.btn-raised).btn-inverse,
 .input-goup-btn .btn.walle-btn:not(.btn-raised).btn-inverse,
 .btn.walle-btn-lg:not(.btn-raised).btn-inverse,
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-inverse {
+.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-inverse,
+.btn.walle-btn-skill:not(.btn-raised).btn-inverse,
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised).btn-inverse {
   color: #3f51b5;
 }
 .btn.walle-btn:not(.btn-raised).btn-primary,
 .input-goup-btn .btn.walle-btn:not(.btn-raised).btn-primary,
 .btn.walle-btn-lg:not(.btn-raised).btn-primary,
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-primary {
+.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-primary,
+.btn.walle-btn-skill:not(.btn-raised).btn-primary,
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised).btn-primary {
   color: #009688;
 }
 .btn.walle-btn:not(.btn-raised).btn-success,
 .input-goup-btn .btn.walle-btn:not(.btn-raised).btn-success,
 .btn.walle-btn-lg:not(.btn-raised).btn-success,
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-success {
+.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-success,
+.btn.walle-btn-skill:not(.btn-raised).btn-success,
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised).btn-success {
   color: #4caf50;
 }
 .btn.walle-btn:not(.btn-raised).btn-info,
 .input-goup-btn .btn.walle-btn:not(.btn-raised).btn-info,
 .btn.walle-btn-lg:not(.btn-raised).btn-info,
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-info {
+.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-info,
+.btn.walle-btn-skill:not(.btn-raised).btn-info,
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised).btn-info {
   color: #03a9f4;
 }
 .btn.walle-btn:not(.btn-raised).btn-warning,
 .input-goup-btn .btn.walle-btn:not(.btn-raised).btn-warning,
 .btn.walle-btn-lg:not(.btn-raised).btn-warning,
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-warning {
+.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-warning,
+.btn.walle-btn-skill:not(.btn-raised).btn-warning,
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised).btn-warning {
   color: #ff5722;
 }
 .btn.walle-btn:not(.btn-raised).btn-danger,
 .input-goup-btn .btn.walle-btn:not(.btn-raised).btn-danger,
 .btn.walle-btn-lg:not(.btn-raised).btn-danger,
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-danger {
+.input-goup-btn .btn.walle-btn-lg:not(.btn-raised).btn-danger,
+.btn.walle-btn-skill:not(.btn-raised).btn-danger,
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised).btn-danger {
   color: #f44336;
 }
 .btn.walle-btn:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .input-goup-btn .btn.walle-btn:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .btn.walle-btn-lg:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .input-goup-btn .btn.walle-btn-lg:not(.btn-raised):not(.btn-link):hover .btn-inner,
-.btn.walle-btn:not(.btn-raised):not(.btn-link):focus .btn-inner,
-.input-goup-btn .btn.walle-btn:not(.btn-raised):not(.btn-link):focus .btn-inner,
-.btn.walle-btn-lg:not(.btn-raised):not(.btn-link):focus .btn-inner,
-.input-goup-btn .btn.walle-btn-lg:not(.btn-raised):not(.btn-link):focus .btn-inner {
+.btn.walle-btn-skill:not(.btn-raised):not(.btn-link):hover .btn-inner,
+.input-goup-btn .btn.walle-btn-skill:not(.btn-raised):not(.btn-link):hover .btn-inner {
   background-color: rgba(153, 153, 153, 0.2);
 }
 .theme-dark .btn.walle-btn:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .theme-dark .input-goup-btn .btn.walle-btn:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .theme-dark .btn.walle-btn-lg:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .theme-dark .input-goup-btn .btn.walle-btn-lg:not(.btn-raised):not(.btn-link):hover .btn-inner,
-.theme-dark .btn.walle-btn:not(.btn-raised):not(.btn-link):focus .btn-inner,
-.theme-dark .input-goup-btn .btn.walle-btn:not(.btn-raised):not(.btn-link):focus .btn-inner,
-.theme-dark .btn.walle-btn-lg:not(.btn-raised):not(.btn-link):focus .btn-inner,
-.theme-dark .input-goup-btn .btn.walle-btn-lg:not(.btn-raised):not(.btn-link):focus .btn-inner {
+.theme-dark .btn.walle-btn-skill:not(.btn-raised):not(.btn-link):hover .btn-inner,
+.theme-dark .input-goup-btn .btn.walle-btn-skill:not(.btn-raised):not(.btn-link):hover .btn-inner {
   background-color: rgba(204, 204, 204, 0.15);
 }
 .btn.walle-btn-lg,
@@ -3147,26 +3161,58 @@ fieldset[disabled] a.input-goup-btn .btn {
   width: 200px;
   height: 200px;
 }
+.btn.walle-btn-skill,
+.input-goup-btn .btn.walle-btn-skill {
+  width: 330px;
+  height: 330px;
+  padding: 50px 65px;
+  margin: 0 0 0 !important;
+}
+.btn.walle-btn-skill > .btn-inner,
+.input-goup-btn .btn.walle-btn-skill > .btn-inner {
+  width: 200px;
+  height: 200px;
+}
+.btn:hover .walle-svg,
+.input-goup-btn .btn:hover .walle-svg,
+.btn:active .walle-svg,
+.input-goup-btn .btn:active .walle-svg {
+  fill: rgba(255, 255, 255, 0.6);
+}
+.walle-btn-wrap {
+  display: inline-block;
+  width: 330px;
+  height: 300px;
+  margin: 100px 20px 40px;
+  background: none;
+  overflow: hidden;
+}
+.walle-svg {
+  width: 37px;
+  height: 37px;
+  fill: #ffffff;
+  stroke: none;
+}
 .btn-default {
-  color: #333;
+  color: #fff;
   background-color: #fff;
   border-color: #ccc;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #333;
+  color: #fff;
   background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
 .btn-default:hover {
-  color: #333;
+  color: #fff;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333;
+  color: #fff;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
@@ -3179,7 +3225,7 @@ fieldset[disabled] a.input-goup-btn .btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
-  color: #333;
+  color: #fff;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
 }
@@ -3202,7 +3248,7 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-default .badge {
   color: #fff;
-  background-color: #333;
+  background-color: #fff;
 }
 .btn-primary {
   color: #fff;
