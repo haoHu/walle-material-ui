@@ -917,6 +917,35 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
+.walle-col3-skill,
+.walle-col3-lg {
+  margin: 0 auto;
+  height: auto;
+  width: 1130px;
+  overflow: hidden;
+}
+.walle-col3-normal {
+  margin: 0 auto;
+  height: auto;
+  width: 932px;
+  overflow: hidden;
+}
+.walle-menu-list {
+  margin: 0 auto;
+  height: auto;
+  width: 1130px;
+  overflow: hidden;
+}
+.walle-menu-list li {
+  display: inline-block;
+  margin: 100px 20px 40px;
+}
+.walle-header-title {
+  font-size: 120pt;
+}
+.walle-sub-header-title {
+  font-size: 45pt;
+}
 code,
 kbd,
 pre,
@@ -2539,7 +2568,7 @@ fieldset[disabled] a.input-goup-btn .btn {
 }
 .btn:not(.btn-raised):not(.btn-link):hover,
 .input-goup-btn .btn:not(.btn-raised):not(.btn-link):hover {
-  background-color: rgba(153, 153, 153, 0.2);
+  background-color: rgba(153, 153, 153, 0.5);
 }
 .theme-dark .btn:not(.btn-raised):not(.btn-link):hover,
 .theme-dark .input-goup-btn .btn:not(.btn-raised):not(.btn-link):hover {
@@ -3140,7 +3169,7 @@ fieldset[disabled] a.input-goup-btn .btn {
 .input-goup-btn .btn.walle-btn-lg:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .btn.walle-btn-skill:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .input-goup-btn .btn.walle-btn-skill:not(.btn-raised):not(.btn-link):hover .btn-inner {
-  background-color: rgba(153, 153, 153, 0.2);
+  background-color: rgba(153, 153, 153, 0.5);
 }
 .theme-dark .btn.walle-btn:not(.btn-raised):not(.btn-link):hover .btn-inner,
 .theme-dark .input-goup-btn .btn.walle-btn:not(.btn-raised):not(.btn-link):hover .btn-inner,
@@ -3166,7 +3195,7 @@ fieldset[disabled] a.input-goup-btn .btn {
   width: 330px;
   height: 330px;
   padding: 50px 65px;
-  margin: 0 0 0 !important;
+  margin: 0!important;
 }
 .btn.walle-btn-skill > .btn-inner,
 .input-goup-btn .btn.walle-btn-skill > .btn-inner {
@@ -3183,7 +3212,6 @@ fieldset[disabled] a.input-goup-btn .btn {
   display: inline-block;
   width: 330px;
   height: 300px;
-  margin: 100px 20px 40px;
   background: none;
   overflow: hidden;
 }
@@ -3775,6 +3803,14 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
   border-radius: 30px;
   overflow: hidden;
 }
+.walle-screen {
+  width: 1280px;
+  height: 720px;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -3829,6 +3865,31 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
   display: none !important;
 }
 .affix {
+  position: fixed;
+}
+.center {
+  text-align: center;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.walle-clearfix {
+  zoom: 1;
+}
+.walle-clearfix:before,
+.walle-clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.walle-clearfix:after {
+  clear: both;
+}
+.fixed {
   position: fixed;
 }
 .visible-xs,

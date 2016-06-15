@@ -22,8 +22,28 @@
 .automargin(@margintop,@margingap,@marginbottom) {
   margin: @margintop @margingap @marginbottom;
 }
-
 //walle svg-icon fill default
 .walle-svg-fill(@opacity) {
   fill:rgba(255,255,255,@opacity);
+}
+//walle col-width 方法
+.col-width(@elementwidth,@num) {
+  margin: 0 auto;
+  height: auto;
+  width: ((@elementwidth + @walle-btn-gap * 2) * @num + 20px);
+  overflow: hidden;
+}
+//walle clearfix
+.walle-clearfix() {
+  zoom:1;
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: block; // 2
+    height: 0;
+    visibility: hidden;
+  }
+  &:after {
+    clear: both;
+  }
 }

@@ -294,28 +294,26 @@ address {
   line-height: @line-height-base;
 }
 
+//walle-cols
+.walle-col3-skill,
+.walle-col3-lg {
+  .col-width(@walle-btn-outer-lg,3);
+}
+.walle-col3-normal{
+  .col-width(@walle-btn-outer,3);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//walle-menu-list
+.walle-menu-list {
+  .col-width(@walle-btn-outer-lg,3);
+}
+.walle-menu-list li {
+  display: inline-block;
+  .automargin(@walle-header-margin-bottom,@walle-btn-gap,@walle-label-margin-top);
+}
+.walle-header-title {
+  font-size: @walle-header-font-size ;
+}
+.walle-sub-header-title {
+  font-size: @walle-sub-header-font-size ;
+}

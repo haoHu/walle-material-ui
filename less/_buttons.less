@@ -98,7 +98,7 @@
     &:not(.btn-link) {
       &:hover {
         // spec: flat/light bg Hover: 20% #999999
-        background-color: fade(#999, 20%);
+        background-color: fade(#999, 50%);
 
         .theme-dark & {
           // spec: dark bg Hover: 15% #cccccc
@@ -259,7 +259,7 @@
       &:not(.btn-link) {
         &:hover .btn-inner {
           // spec: flat/light bg Hover: 20% #999999
-          background-color: fade(#999, 20%);
+          background-color: fade(#999, 50%);
 
           .theme-dark & {
             // spec: dark bg Hover: 15% #cccccc
@@ -281,7 +281,7 @@
   &.walle-btn-skill {
       .box-size(@walle-btn-outer-lg);
       padding: ((@walle-btn-outer-skill - @walle-btn-inner-lg) / 2) ((@walle-btn-outer-lg - @walle-btn-inner-lg) / 2);
-      .automargin(0,0,0)!important;
+      margin: 0!important;
       > .btn-inner {
         .box-size(@walle-btn-inner-lg);
     }
@@ -299,7 +299,7 @@
 .walle-btn-wrap {
   display: inline-block;
   .box-size(@walle-btn-outer-lg,@walle-btn-outer-skill);
-  .automargin(@walle-header-margin-bottom,@walle-btn-gap,@walle-label-margin-top);
+  //.automargin(@walle-header-margin-bottom,@walle-btn-gap,@walle-label-margin-top);
   background: none;
   overflow: hidden;
 }

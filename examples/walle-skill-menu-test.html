@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+  <title>Walle UI -- Buttons</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../dist/css/core.css">
+  <link rel="stylesheet" href="../dist/css/svg.sprite.css">
+  <!-- <link rel="stylesheet" href="../bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css"> -->
+  <link rel="stylesheet" href="../bower_components/bootstrap-material-design/dist/css/ripples.css">
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+  <script src="../bower_components/bootstrap-material-design/dist/js/material.js"></script>
+
+
+</head>
+<body>
+<style>
+html,body,div{padding: 0; margin: 0;}
+
+
+</style>
+<div class="walle-screen">
+  <h1 class="walle-header-title center">menu skill</h1>
+  <ul class="list-unstyled walle-menu-list walle-clearfix">
+    <li>
+       <div class="walle-btn-wrap">
+       <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+         <div class="btn-inner">
+           <div class="text-vertical-middle">
+             <p class="text-inner">
+               <i>
+               <!-- media-music -->
+               <svg class="walle-svg svg-media-music-dims">
+                 <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-music"></use>
+               </svg>
+               </i>
+             </p>
+           </div>
+         </div>
+       </a>
+       </div>
+       <h3 class="walle-sub-header-title">music</h3>
+   </li>
+     <li>
+        <div class="walle-btn-wrap">
+        <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+          <div class="btn-inner">
+            <div class="text-vertical-middle">
+              <p class="text-inner">
+                <i>
+                <!-- media-music -->
+                <svg class="walle-svg svg-media-music-dims">
+                  <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-images"></use>
+                </svg>
+                </i>
+              </p>
+            </div>
+          </div>
+        </a>
+        </div>
+        <h3 class="walle-sub-header-title">images</h3>
+    </li>
+    <li>
+       <div class="walle-btn-wrap">
+       <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+         <div class="btn-inner">
+           <div class="text-vertical-middle">
+             <p class="text-inner">
+               <i>
+               <!-- media-music -->
+               <svg class="walle-svg svg-media-music-dims">
+                 <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-camera"></use>
+               </svg>
+               </i>
+             </p>
+           </div>
+         </div>
+       </a>
+       </div>
+       <h3 class="walle-sub-header-title">camera</h3>
+   </li>
+</ul>
+
+</div>
+
+
+<script>
+  $(function () {
+    $.material.init();
+  });
+</script>
+</body>
+</html>
