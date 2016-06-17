@@ -1,0 +1,65 @@
+[33mcommit 2448cc093d0d43daeeba67d15a7fada5386bcf58[m
+Author: scr709 <songchunrui@netposa.com>
+Date:   Tue Jun 14 17:49:06 2016 +0800
+
+    walle-ui-song
+
+[33mcommit f5ecbef25be6c9e6a873c5444fba7b250d1e0bdc[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Sun Jun 12 10:48:49 2016 +0800
+
+    update code
+
+[33mcommit 67158a479a8cfb0e43598cf49736942c9c32cc5a[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Sun Jun 12 10:41:25 2016 +0800
+
+    update code
+
+[33mcommit de47b41d0d4448cebcf76986681a4b968a42262e[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Sun Jun 12 10:22:58 2016 +0800
+
+    update code
+
+[33mcommit 015a762479a3c8bababc97734c373c817bf3af00[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Sun Jun 12 09:46:51 2016 +0800
+
+    update bower.json
+
+[33mcommit 79b2eb3a06e9eeb3f1d50d8cbf0cbb68fd9411a0[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Sun Jun 12 09:45:00 2016 +0800
+
+    delete fonts
+
+[33mcommit b461f598e6c30dc892bd1f875391ee4cf681f309[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Sun Jun 12 09:41:50 2016 +0800
+
+    update bower.json
+
+[33mcommit c48177a998c1ad1b650d04e69117cd418be00dc5[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Fri Jun 10 10:57:15 2016 +0800
+
+    update bower ignore
+
+[33mcommit 1735871984b0b31961f46235e03361ce6b62c098[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Fri Jun 10 10:04:04 2016 +0800
+
+    add bower ignore
+
+[33mcommit db05f00e9875393472650bd2e03d39c042669fbc[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Fri Jun 10 09:43:29 2016 +0800
+
+    update bower.json
+
+[33mcommit dcb11ac7f9869e0762917b0194f6c99cc276d244[m
+Author: HuHao <huhao@HuHaodeMacBook-Pro-2.local>
+Date:   Fri Jun 10 09:23:37 2016 +0800
+
+    init walle material ui lib

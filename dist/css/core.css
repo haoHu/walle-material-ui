@@ -467,7 +467,7 @@ body {
   font-size: 20pt;
   line-height: 1.42857143;
   color: #fff;
-  background-color: #303030;
+  background-color: #000;
 }
 input,
 button,
@@ -510,7 +510,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #303030;
+  background-color: #000;
   border: 1px solid #ddd;
   border-radius: 2px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1709,7 +1709,7 @@ th {
   border-top: 2px solid #ddd;
 }
 .table .table {
-  background-color: #303030;
+  background-color: #000;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -2747,7 +2747,7 @@ fieldset[disabled] a.input-goup-btn .btn {
 .input-goup-btn .btn.btn-raised:not(.btn-link):active .btn-inner.btn-default,
 .btn-group-raised .btn:not(.btn-link):active .btn-inner.btn-default,
 .btn-group-raised .input-goup-btn .btn:not(.btn-link):active .btn-inner.btn-default {
-  background-color: #3a3a3a;
+  background-color: #0a0a0a;
 }
 .btn.btn-raised:not(.btn-link):hover.btn-inverse,
 .input-goup-btn .btn.btn-raised:not(.btn-link):hover.btn-inverse,
@@ -3216,8 +3216,8 @@ fieldset[disabled] a.input-goup-btn .btn {
   overflow: hidden;
 }
 .walle-svg {
-  width: 37px;
-  height: 37px;
+  width: 72px;
+  height: 72px;
   fill: #ffffff;
   stroke: none;
 }
@@ -3797,7 +3797,7 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
   position: relative;
   width: 1280px;
   height: 720px;
-  border: 10px solid #303030;
+  border: 10px solid #000;
   background-color: #eeeeee;
   text-align: center;
   border-radius: 30px;
@@ -3809,6 +3809,27 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
   border-radius: 30px;
   margin: 0 auto;
   text-align: center;
+  background-color: #000;
+  overflow: hidden;
+}
+.walle-screen-interface {
+  width: 1280px;
+  height: 720px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #000;
+  background-image: url("../images/JiboFrameFade.png");
+  background-size: contain;
+  overflow: hidden;
+}
+.walle-screen-content {
+  width: 1280px;
+  height: 720px;
+  border: 10px solid #000;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
   overflow: hidden;
 }
 .clearfix:before,
@@ -3866,9 +3887,6 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
 }
 .affix {
   position: fixed;
-}
-.center {
-  text-align: center;
 }
 .fl {
   float: left;

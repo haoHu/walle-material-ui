@@ -13,21 +13,28 @@
   <link rel="stylesheet" href="../dist/css/svg.sprite.css">
   <!-- <link rel="stylesheet" href="../bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css"> -->
   <link rel="stylesheet" href="../bower_components/bootstrap-material-design/dist/css/ripples.css">
+  <link rel="stylesheet" href="../bower_components/swiper/dist/css/swiper.css">
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script src="../bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
   <script src="../bower_components/bootstrap-material-design/dist/js/material.js"></script>
+  <script src="../bower_components/swiper/dist/js/swiper.js"></script>
 
 
 </head>
 <body>
 <style>
-html,body,div{padding: 0; margin: 0;}
-
+html,body,div {padding: 0; margin: 0;}
+.walle-swiper { background:none;}
 
 </style>
 <div class="walle-screen">
   <h1 class="walle-header-title center">menu skill</h1>
-  <ul class="list-unstyled walle-menu-list walle-clearfix">
+
+<div class="swiper-container swiper-container-horizontal">
+  <div class="swiper-wrapper" style="transition-duration:500ms; transform: translate3d(0px, 0px, 0px);">
+    <div class="swiper-slide" data-hash="slide1">
+
+    <ul class="list-unstyled walle-menu-list walle-swiper">
     <li>
        <div class="walle-btn-wrap">
        <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
@@ -85,7 +92,208 @@ html,body,div{padding: 0; margin: 0;}
        </div>
        <h3 class="walle-sub-header-title">camera</h3>
    </li>
+
 </ul>
+
+    </div>
+    <div class="swiper-slide" data-hash="slide2">
+
+    <ul class="list-unstyled walle-menu-list  walle-swiper">
+    <li>
+       <div class="walle-btn-wrap">
+       <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+         <div class="btn-inner">
+           <div class="text-vertical-middle">
+             <p class="text-inner">
+               <i>
+               <!-- media-music -->
+               <svg class="walle-svg svg-media-music-dims">
+                 <use xlink:href="../dist/images/svg/sprite.symbol.svg#bubbles-bubbles"></use>
+               </svg>
+               </i>
+             </p>
+           </div>
+         </div>
+       </a>
+       </div>
+       <h3 class="walle-sub-header-title">music</h3>
+   </li>
+     <li>
+        <div class="walle-btn-wrap">
+        <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+          <div class="btn-inner">
+            <div class="text-vertical-middle">
+              <p class="text-inner">
+                <i>
+                <!-- media-music -->
+                <svg class="walle-svg svg-media-music-dims">
+                  <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-newspaper"></use>
+                </svg>
+                </i>
+              </p>
+            </div>
+          </div>
+        </a>
+        </div>
+        <h3 class="walle-sub-header-title">images</h3>
+    </li>
+    <li>
+       <div class="walle-btn-wrap">
+       <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+         <div class="btn-inner">
+           <div class="text-vertical-middle">
+             <p class="text-inner">
+               <i>
+               <!-- media-music -->
+               <svg class="walle-svg svg-media-music-dims">
+                 <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-film"></use>
+               </svg>
+               </i>
+             </p>
+           </div>
+         </div>
+       </a>
+       </div>
+       <h3 class="walle-sub-header-title">camera</h3>
+   </li>
+</ul>
+
+    </div>
+
+    <div class="swiper-slide" data-hash="slide3">
+
+    <ul class="list-unstyled walle-menu-list walle-swiper">
+    <li>
+       <div class="walle-btn-wrap">
+       <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+         <div class="btn-inner">
+           <div class="text-vertical-middle">
+             <p class="text-inner">
+               <i>
+               <!-- media-music -->
+               <svg class="walle-svg svg-media-music-dims">
+                 <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-music"></use>
+               </svg>
+               </i>
+             </p>
+           </div>
+         </div>
+       </a>
+       </div>
+       <h3 class="walle-sub-header-title">music</h3>
+   </li>
+     <li>
+        <div class="walle-btn-wrap">
+        <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+          <div class="btn-inner">
+            <div class="text-vertical-middle">
+              <p class="text-inner">
+                <i>
+                <!-- media-music -->
+                <svg class="walle-svg svg-media-music-dims">
+                  <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-images"></use>
+                </svg>
+                </i>
+              </p>
+            </div>
+          </div>
+        </a>
+        </div>
+        <h3 class="walle-sub-header-title">images</h3>
+    </li>
+    <li>
+       <div class="walle-btn-wrap">
+       <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+         <div class="btn-inner">
+           <div class="text-vertical-middle">
+             <p class="text-inner">
+               <i>
+               <!-- media-music -->
+               <svg class="walle-svg svg-media-music-dims">
+                 <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-camera"></use>
+               </svg>
+               </i>
+             </p>
+           </div>
+         </div>
+       </a>
+       </div>
+       <h3 class="walle-sub-header-title">camera</h3>
+   </li>
+
+</ul>
+
+    </div>
+
+    <div class="swiper-slide" data-hash="slide4">
+
+    <ul class="list-unstyled walle-menu-list  walle-swiper">
+    <li>
+       <div class="walle-btn-wrap">
+       <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+         <div class="btn-inner">
+           <div class="text-vertical-middle">
+             <p class="text-inner">
+               <i>
+               <!-- media-music -->
+               <svg class="walle-svg svg-media-music-dims">
+                 <use xlink:href="../dist/images/svg/sprite.symbol.svg#bubbles-bubbles"></use>
+               </svg>
+               </i>
+             </p>
+           </div>
+         </div>
+       </a>
+       </div>
+       <h3 class="walle-sub-header-title">music</h3>
+   </li>
+     <li>
+        <div class="walle-btn-wrap">
+        <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+          <div class="btn-inner">
+            <div class="text-vertical-middle">
+              <p class="text-inner">
+                <i>
+                <!-- media-music -->
+                <svg class="walle-svg svg-media-music-dims">
+                  <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-newspaper"></use>
+                </svg>
+                </i>
+              </p>
+            </div>
+          </div>
+        </a>
+        </div>
+        <h3 class="walle-sub-header-title">images</h3>
+    </li>
+    <li>
+       <div class="walle-btn-wrap">
+       <a href="javascript:void 0;" style="float:left; display:inline-block;" class="btn walle-btn-skill">
+         <div class="btn-inner">
+           <div class="text-vertical-middle">
+             <p class="text-inner">
+               <i>
+               <!-- media-music -->
+               <svg class="walle-svg svg-media-music-dims">
+                 <use xlink:href="../dist/images/svg/sprite.symbol.svg#media-film"></use>
+               </svg>
+               </i>
+             </p>
+           </div>
+         </div>
+       </a>
+       </div>
+       <h3 class="walle-sub-header-title">camera</h3>
+   </li>
+</ul>
+
+    </div>
+
+
+  </div>
+</div>
+
+
 
 </div>
 
@@ -94,6 +302,15 @@ html,body,div{padding: 0; margin: 0;}
   $(function () {
     $.material.init();
   });
+</script>
+
+<script>
+//swiper
+var mySwiper = new Swiper('.swiper-container',{
+mousewheelControl : true,
+hashnav:true,
+})
+
 </script>
 </body>
 </html>

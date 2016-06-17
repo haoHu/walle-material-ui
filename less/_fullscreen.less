@@ -15,6 +15,31 @@
   .box-size(@walle-screen-width, @walle-screen-height);
   border-radius: @walle-border-radius;
   margin: 0 auto;
-  .center;
+  .center();
+  background-color: @walle-body-bg ;
   overflow: hidden;
+}
+
+//Walle Screen interface
+.walle-screen-interface {
+  .box-size(@walle-screen-width, @walle-screen-height);
+  margin: 0 auto;
+  .center();
+  background-color: @walle-body-bg;
+  background-image: url(@walle-bg-image);
+  background-size: contain;
+  overflow: hidden;
+
+}
+
+//Walle Screen content
+.walle-screen-content {
+  .box-size(@walle-screen-width, @walle-screen-height);
+  border: @walle-full-screen-border solid @walle-body-bg;
+  margin: 0 auto;
+  .center();
+  border-radius: @walle-border-radius;
+  -webkit-border-radius: @walle-border-radius;
+  overflow: hidden;
+
 }
