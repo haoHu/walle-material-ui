@@ -28,6 +28,9 @@ module.exports = function (grunt) {
       options : {
         // name : 'sprite',
         style : "../../../less/icons.less",
+        engine: 'gm',
+        format: 'png', // because sprity name it with uppercase: https://github.com/sprity/sprity/issues/28
+        //'gm-use-imagemagick': true,
         'dimension': [{
             ratio: 1, dpi: 72
           }, {
@@ -36,7 +39,7 @@ module.exports = function (grunt) {
         cssPath : "../images/icons",
         processor : 'css',
         orientation : "vertical",
-        margin:5,
+        margin: 0,
         prefix : 'icon',
         split : true,
 
@@ -217,6 +220,21 @@ module.exports = function (grunt) {
         dest : "dist/css/core.min.css"
       }
     },
+    concat: {
+            domop: {
+                src: 'js/walle-injector.js',
+                dest: 'dist/js/walle-injector.js'
+            }
+        },
+    uglify: {
+        // options: {
+        //     banner: '\n'
+        // },
+        bulid: {
+            src: 'dist/js/walle-injector.js',
+            dest: 'dist/js/walle-injector.min.js'
+        }
+    },
     connect : {
       options : {
         port : 8041,
@@ -244,6 +262,8 @@ module.exports = function (grunt) {
           livereload : "<%= connect.options.livereload %>"
         },
         files : [
+          "images/**/*.png",
+          "js/**/*.js",
           "examples/**/*.html",
           "dist/js/**/*.js",
           "dist/css/**/*.css",
@@ -302,6 +322,18 @@ module.exports = function (grunt) {
     "watch"
   ]);
 
+    // 默认任务
+    grunt.registerTask("default", [
+      "svg-sprite",
+      "icons-sprite",
+      "web-font",
+      "dist-less",
+      "concat",
+      "uglify",
+      "connect:livereload",
+      "watch"
+    ]);
+
   // 注册发布任务
   grunt.registerTask("build", [
     "svg-sprite",
@@ -309,5 +341,4 @@ module.exports = function (grunt) {
     "web-font",
     "dist-less"
   ]);
-
 }
