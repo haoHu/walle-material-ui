@@ -24,7 +24,7 @@
 	"dependencies": {
 		"jquery": "^2.2",
 		"bootstrap": "~3.3.6",
-		"bootstrap-material-design" : "latest",
+		"bootstrap-material-design" : "0.5.10",
 		"dropdown.js" : "latest",
 		"avalon" : "1.5",
 		"requirejs" : "latest",
